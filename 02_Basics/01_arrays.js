@@ -32,7 +32,7 @@ console.log("A-Original Array", array2);
 console.log("After slice", myNewArray);
 
 const myNewArray2 = array2.splice(1, 3);
-console.log("B-Original Array", array2);
 console.log("Ater Splice", myNewArray2);
+console.log("Original Array", array2);
 
 // In slice the mentioned range is copied where as splice removes the elements of the mentioned range from the array

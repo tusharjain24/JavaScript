@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>DOM Learning</title>
+    <style>
+      .bg-black {
+        background-color: #212122;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body class="bg-black">
+    <div>
+      <h1 id="title" class="heading">
+        DOM Learning <span style="display: none"> test text </span>
+      </h1>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus
+        veniam non maxime natus cupiditate ad eos velit debitis consequuntur
+        dolores iste aliquid temporibus recusandae dignissimos nihil, numquam
+        modi nostrum. Officiis!
+      </p>
+      <h2>Tushar Jain</h2>
+      <h2>Avdhesh</h2>
+      <h2>Aashit</h2>
+      <input type="password" value="password" name="password" />
+
+      <ol>
+        <li class="list-items">one</li>
+        <li class="list-items">two</li>
+        <li class="list-items">three</li>
+        <li class="list-items">four</li>
+      </ol>
+    </div>
+  </body>
+</html>
+
+<!-- LECTURE: 31 -->
+
+<!-- console.log(window); // Here window is an object
+    // Every thing below is an object
+    console.log(window.document);
+    console.log(document.baseURI);
+    console.log(document.links); // Returns an HTMLCollection
+
+    // Document Methods ==> Selector Methods
+    document.getElementById("Id")
+
+    document.getElementByClassName("heading");
+
+    // Document Manipulation
+    document.getElementById("Id").innerHTML = "<h1>Tushar Jain</h1>"
+-->
+
+<!-- LECTURE: 32 -->
+<!-- 
+    DOM Manipulation
+
+    document.getElementById("title").id    //Will return the Id
+    document.getElementById("title").class    
+    document.getElementById("title").className    //Will return the Class Name
+    document.getElementById("title").getAttribute("id")
+    document.getElementById("title").getAttribute("class")
+    document.getElementById("title").setAttribute("class", "test") // Will always overwrite the class name
+    document.getElementById("title").setAttribute("class", "test heading") // to add another class name
+    const title = document.getElementById("title")
+    title.style.backgroundColor = "green"
+    title.style.borderRadius = "5px"
+    title.style.padding = "15px"
+ 
+    title.textContent   // Gives the entire text content whether it is visible or not
+    title.innerHTML     // Returns the entire content along with html tags
+    title.innerText // only returns visible text content
+
+-->
+
+<!-- To select elements for DOM manipulation
+
+    document.querySelector("h2")    // will return the first h2 tag
+    document.querySelector("#title")    // will return the element that has id 'title'
+    document.querySelector(".heading")    // will return the first element that has class 'heading'
+
+    document.querySelectorAll("h2")    // will return a NodeList of all h2 tags
+
+    const tempList = document.querySelectorAll("h2")
+    tempList[0].style.color = "Green"
+
+    tempList.forEach((l) => {
+        l.style.backgroundColor = "green"
+    })
+
+    const tempClassList = document.getElementByClassName("list-items")
+
+    Array.from(tempClassList).forEach((l) => {
+        l.style.color = "orange"
+    })
+ -->
