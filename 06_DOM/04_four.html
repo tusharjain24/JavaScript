@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Manipulation</title>
+  </head>
+  <body style="background-color: #212121; color: #fff">
+    <ul class="languages">
+      <li>JavaScript</li>
+    </ul>
+  </body>
+  <script>
+    // Add
+
+    function addLang(langName) {
+      const li = document.createElement("li");
+      li.innerHTML = `${langName}`;
+      document.querySelector(".languages").appendChild(li);
+    }
+    addLang("Python");
+
+    function optimizeAddLang(langName) {
+      const li = document.createElement("li");
+      li.appendChild(document.createTextNode(langName));
+      document.querySelector(".languages").appendChild(li);
+    }
+    optimizeAddLang("golang");
+    optimizeAddLang("C++");
+
+    // Edit
+    function editLang(langName) {
+      const secondLang = document.querySelector("li:nth-child(2)");
+      //   secondLang.innerHTML = "Mojo";   // Not optimized way as it will traverse the entire tree
+      const newLi = document.createElement("li");
+      newLi.textContent = langName; //Not optimized enough
+      secondLang.replaceWith(newLi);
+    }
+    editLang("Mojo");
+
+    // Much more Optimized
+    function optimizedEditLang(langName) {
+      const thirdLang = document.querySelector("li:nth-child(3)");
+      const newLi = document.createElement("li");
+      newLi.appendChild(document.createTextNode(langName));
+      thirdLang.replaceWith(newLi);
+    }
+
+    // Another way to edit
+    optimizedEditLang("Python");
+    const firstLang = document.querySelector("li:first-child");
+    firstLang.outerHTML = "<li>TypeScript</li>";
+
+    // Remove
+    const lastLang = document.querySelector("li:last-child");
+    lastLang.remove();
+  </script>
+</html>
