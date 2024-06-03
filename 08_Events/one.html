@@ -58,25 +58,33 @@
     </div>
   </body>
   <script>
-    // document.getElementById("owl").onclick = () => {
-    //   alert("Owl Cliked");
-    // };
+    /*
+    *onClick event does not give us a lot of information such as event propogation other things therefore we don't prefer to use it. Refer to line for 69 to some of the information that we get from events when we use addEventListener()
+
+    document.getElementById("owl").onclick = () => {
+      alert("Owl Cliked");
+    };
+    */
+
+    /*
+
+    type, timestamp, defaultPrevented
+    target, toElement, srcElement, currentTarget,
+    clientX, clientY, screenX, screenY
+    altkey, ctrlkey, shiftkey, keyCode
+
+    */
 
     document.getElementById("owl").addEventListener(
       "click",
       (e) => {
-        console.log("clicked on owl");
+        alert("clicked on owl");
       },
       false // This basically captures Event Bubbling(inside to outside event); if true it means Event Capturing(Outside to inside). This is Event Propogation
     );
 
-    // attachEvent()
+    // attachEvent()  //  Internet Explorer
     // jQuery - onEvent
-
-    // type, timestamp, defaultPrevented
-    // target, toElement, srcElement, currentTarget,
-    // clientX, clientY, screenX, screenY
-    // altkey, ctrlkey, shiftkey, keyCode
 
     document.getElementById("images").addEventListener(
       "click",
@@ -97,14 +105,16 @@
     //     console.log("google clicked");
     // }, false)
 
-    document.querySelector("#images").addEventListener("click", function (e) {
-      console.log(e.target.tagName);
-      if (e.target.tagName === "IMG") {
-        console.log(e.target.id);
-        let removeIt = e.target.parentNode;
-        removeIt.remove();
-      }
-    });
+    // document.querySelector("#images").addEventListener("click", function (e) {
+    //   console.log(e.target.tagName);
+    //   if (e.target.tagName === "IMG") {
+    //     console.log(e.target.id);
+    //     let removeIt = e.target.parentNode;
+    // We are selecting li because we have to remove bullet points along with the images
+
+    //     removeIt.remove();
+    //   }
+    // });
 
     //removeIt.parentNode.removeChild(removeIt)
   </script>

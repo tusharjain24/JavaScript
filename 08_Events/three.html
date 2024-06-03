@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Web Browser API's(setInterval)</h1>
+    <button id="start">Start</button>
+    <button class="stop">Stop</button>
+  </body>
+  <script>
+    const sayDate = function (str) {
+      console.log(str, Date.now());
+    };
+
+    let intervalId;
+
+    const start = document.querySelector("#start");
+    start.addEventListener("click", () => {
+      interval_Id = setInterval(sayDate, 2000, "Hi Tushar");
+      console.log("setInterval Started");
+    });
+
+    const end = document.querySelector(".stop");
+    end.addEventListener("click", () => {
+      clearInterval(interval_Id);
+      console.log("setInterval Stopped");
+    });
+  </script>
+</html>
