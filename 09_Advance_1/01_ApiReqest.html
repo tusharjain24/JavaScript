@@ -1,0 +1,79 @@
+<!-- 
+    ajax:- Asynchronous JavaScript and XML
+    Before fetch we used XMLHTTPRequest to handle API's
+    In Ajax, we manage states
+
+Value	  State	            Description
+0	      UNSENT	          Client has been created. open() not called yet.
+1	      OPENED	          open() has been called.
+2	      HEADERS_RECEIVED	send() has been called, and headers and status are available.
+3	      LOADING	          Downloading; responseText holds partial data.
+4	      DONE	            The operation is complete.
+ 
+XMLHTTPRequest is a Object and we call constructor XMLHTTPRequest().
+
+console is not part of javaScript. It is a debugging tool used by developers provided by the browser.
+
+
+URL of V8:
+  https://github.com/v8/v8
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body style="background-color: #212121; color: aliceblue">
+    <p>0 UNSENT Client has been created. open() not called yet.</p>
+    <p>1 OPENED open() has been called.</p>
+    <p>
+      2 HEADERS_RECEIVED send() has been called, and headers and status are
+      available.
+    </p>
+    <p>3 LOADING Downloading; responseText holds partial data.</p>
+    <p>4 DONE The operation is complete.</p>
+    <h2>GET GitHub data of Hitesh Choudhary by Clicking the button below</h2>
+    <button id="getData">GET DATA</button>
+  </body>
+  <script>
+    // let gitHubRequestURL = "https://api.github.com/users/tusharjain24";
+    // const xhr = new XMLHttpRequest();
+    // xhr.open("GET", gitHubRequestURL);
+    // xhr.onreadystatechange = function () {
+    //   // console.log(xhr.readyState);
+    //   if (xhr.readyState === 4) {
+    //     let data = JSON.parse(this.responseText);
+    //     console.log(typeof data);
+    //     console.log(data.followers);
+    //   }
+    // };
+    // console.log(xhr.readyState);
+    // xhr.send();
+
+    let gitHubRequestURL = "https://api.github.com/users/hiteshchoudhary";
+    const getData = document.getElementById("getData");
+    getData.addEventListener("click", (event) => {
+      // console.log("Button Pressed");
+      // event.preventDefault();
+      const xhr = new XMLHttpRequest();
+      xhr.open("GET", gitHubRequestURL);
+      // console.log(xhr.readyState);
+      xhr.onreadystatechange = function () {
+        // console.log(xhr.readyState);
+        if (xhr.readyState === 4) {
+          // console.log(this.responseText);
+          let data = JSON.parse(this.responseText);
+          let image_url = data.avatar_url;
+          let followers = data.followers;
+          const div = document.createElement("div");
+          div.innerHTML = `<img src=${image_url} style="height=80% width=100%" /><p>Followers: ${followers}</p>`;
+          document.body.appendChild(div);
+        }
+      };
+      xhr.send();
+    });
+  </script>
+</html>
