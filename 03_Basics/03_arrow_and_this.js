@@ -15,29 +15,24 @@ const user = {
 // user.username = "sam";
 // user.welcomeMessage();
 
-// function chai(){
-//     let username = "Tushar"
-//     console.log(this);
+// function chai() {
+//   let username = "Tushar";
+//   console.log(this);
 // }
 
-// function chai(){
-//     let username = "Tushar"
-//     console.log(this.username);  //Will return undefined
+// function chai() {
+//   let username = "Tushar";
+//   console.log(this.username); //Will return undefined
 // }
 
-// chai()
-
-// const chai = function () {
-//     let username = "Tushar"
-// console.log(this.username);  //Will return undefined
-// }
+// chai();
 
 const chai = () => {
   let username = "Tushar";
   console.log(this);
 };
 
-chai();
+// chai();
 
 // NORMAL ARROW function (Explicit Return)
 // const addTwo = (num1, num2) => {

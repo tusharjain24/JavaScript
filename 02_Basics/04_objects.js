@@ -43,12 +43,12 @@ const obj3 = {
 // console.log(obj3);
 
 //Copy the values of all of the enumerable own properties from one or more source objects to a target object. Returns the target object
-//Syntax = Object,assign(target, source1, source2, source3)
+//Syntax = Object.assign(target, source1, source2, source3)
 const obj4 = Object.assign({}, obj1, obj2, obj3);
-// console.log(obj4);
+console.log(obj4);
 
 const obj5 = { ...obj1, ...obj2, ...obj3 }; //Using Spread operator
-// console.log(obj5);
+console.log(obj5);
 
 // console.log("A", Object.keys(tinderUser));
 // console.log("B", Object.values(tinderUser));

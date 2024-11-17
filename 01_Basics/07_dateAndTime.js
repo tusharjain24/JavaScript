@@ -1,7 +1,7 @@
 /*  *Date  */
 
 let myDate = new Date();
-//Date is an obeject in JS
+//Date is an object in JS
 // Month starts from 0 in Date in JS
 
 // console.log(typeof(myDate));

@@ -30,13 +30,11 @@ coding.forEach(printMe);
 
 */
 
-/* Parameters you get inside for-each loop
+//  Parameters you get inside for-each loop
 
 coding.forEach((item, index, array) => {
   console.log(`item: ${item}, index: ${index}, from array: ${array}`);
 });
-
-*/
 
 const myCoding = [
   {
@@ -63,7 +61,7 @@ myCoding.forEach(({ languageName, languageFileName }) => {
 // const coding = ["js", "ruby", "java", "python", "cpp"]
 
 // const values = coding.forEach( (item) => {
-//     //console.log(item);
+//console.log(item);
 //     return item
 // } )
 

@@ -8,15 +8,15 @@
  * vii> Bigint
  */
 
-const score = 100
-const scoreValue = 100.3
+const score = 100;
+const scoreValue = 100.3;
 
-const isLoggedIn = false
-const outsideTemp = null
+const isLoggedIn = false;
+const outsideTemp = null;
 let userEmail;
 
-const id = Symbol('123')
-const anotherId = Symbol('123')
+const id = Symbol("123");
+const anotherId = Symbol("123");
 
 console.log(id === anotherId);
 
@@ -30,13 +30,13 @@ console.log(id === anotherId);
 
 const heros = ["shaktiman", "naagraj", "doga"];
 let myObj = {
-    name: "hitesh",
-    age: 22,
-}
+  name: "hitesh",
+  age: 22,
+};
 
-const myFunction = function(){
-    console.log("Hello world");
-}
+const myFunction = function () {
+  console.log("Hello world");
+};
 
 console.log(typeof anotherId);
 
@@ -77,8 +77,6 @@ Static typing helps catch type-related errors early in the development process, 
 Statically typed languages often require more verbose type annotations, which can make code slightly more complex but can also improve code readability and maintainability, especially in large projects.
 Examples of statically typed languages include Java, C, C++, Swift, and TypeScript (a superset of JavaScript with optional static typing).
  */
-
- ___________________________________________________________________________________________________________________________________________
 //  Primitive Datatypes are stored in STACK in JS.
 //  Non Primitive Datatypes are stored in HEAP in JS.
 /**

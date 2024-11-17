@@ -39,7 +39,7 @@ let boolName = Boolean(Name);
 /* Notes: */
 // 1 => true; 0 => false
 // "" => false
-// "hitesh" => true
+// "tushar" => true
 
 let someNumber = 33;
 

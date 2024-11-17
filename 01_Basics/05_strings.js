@@ -10,10 +10,10 @@ const repoCount = "5";
 const gameName = new String("Tushar_Jain");
 
 // console.log(gameName[0]);
-console.log(gameName.__proto__);
+console.log(gameName.__proto__); //Write it in the console of Browser
 
 // console.log(gameName.length);
-// console.log(gameName.toUpperCase~());
+console.log(gameName.toUpperCase());
 // console.log(gameName.charAt(5));
 // console.log(gameName.indexOf("J"));
 

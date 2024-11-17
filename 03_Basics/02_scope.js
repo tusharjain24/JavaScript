@@ -18,9 +18,9 @@ if (true) {
 // console.log(b);
 // console.log(c);
 
-// <----------------------------------------- LECTURE:22 ------------------------------------------------------>
+// <----------------------------------------- LECTURE:22 ------------------------------------------------>
 
-// In Nested Functions child function can access parent function's variables
+// Closure: In Nested Functions child function can access parent function's variables(Lexical Scope) but parent function cannot access child function's variables.
 function one() {
   const username = "Tushar";
 
@@ -52,7 +52,7 @@ function addone(num) {
   return num + 1;
 }
 
-// addTwo(5);   //Will throw an error because addTwo has not been defined yet due to hoisting
+// console.log(addTwo(5)); //Will throw an error because addTwo has not been defined yet due to hoisting
 const addTwo = function (num) {
   return num + 2;
 };
